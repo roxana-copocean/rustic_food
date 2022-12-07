@@ -5,8 +5,6 @@
 	--clr-400: #733a26;
 	--clr-500: #27291f;
 
-	--clr-primary-400: hsl(228, 39%, 23%);
-
 	--clr-neutral-darkest: #0d0d0d;
 	--clr-neutral-dark: #403027;
 	--clr-neutral-light: #735a4c;
@@ -105,7 +103,7 @@ html {
 
 .navbar.change {
 	top: 0;
-	transition: top 0.4s 0.2s;
+	transition: top 0.5s;
 }
 
 .navbar-link {
@@ -165,12 +163,12 @@ html {
 	border-radius: 30rem 30rem 15rem 15rem;
 	box-shadow: .1rem .1rem .1rem var(--clr-neutral-darkest), -.1rem -.1rem .1rem var(--clr-neutral-darkest);
 	cursor: pointer;
-	transition: top .4s .2s;
+	transition: top .5s;
 	z-index: 999;
 }
 .menu.change {
 	top: 15rem;
-	transition: top .4s;
+	transition: top .5s;
 }
 
 .menu::before {
@@ -192,11 +190,11 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: center;
 }
 
 .section-heading {
-	font-size: 10rem;
+	font-size: 7rem;
 	margin-bottom: 4rem;
 	font-weight: 900;
 	color: var(--clr-100);
@@ -208,20 +206,29 @@ html {
 
 .primary-heading {
 	color: var(--clr-neutral-darkest);
+	margin-bottom: 2rem;
+}
+
+h4 {
+	margin-bottom: 14rem;
+	font-size: 2rem;
+	color: var(--clr-neutral-dark);
 }
 
 .section-1-icons img {
 	height: 25rem;
-
+	margin: 4rem 0;
 	position: absolute;
 	transform: translate(-50%, -50%) scale(0);
 	text-shadow: .2rem .2rem .2rem var(--clr-neutral-darkest);
-	transition: transform .3s;
+	transition: transform .5s;
+	transition-timing-function: ease-in-out;
 }
 
 .section-1-icons img.change {
 	transform: translate(-50%, -50%) scale(1);
 	transition: transform .3s .3s;
+	transition-timing-function: ease-in-out;
 }
 
 /* section 2 */
@@ -320,6 +327,8 @@ html {
 .section-3 {
 	background-color: var(--clr-500);
 	padding: 5rem 0;
+	background: rgb(64, 48, 39);
+	background: linear-gradient(15deg, rgba(64, 48, 39, 1) 39%, rgba(13, 13, 13, 1) 90%);
 }
 
 .gallery-link {
@@ -463,7 +472,7 @@ html {
 	color: var(--clr-100);
 }
 .signup-form__input::placeholder {
-	color: var(--clr-100);
+	color: var(--clr-300);
 }
 
 .signup-form__btn {
